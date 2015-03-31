@@ -1,7 +1,6 @@
 pre/
 _bak/
 logs/
-.htaccess
 *.bkp
 *.org
 *.swp
