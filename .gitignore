@@ -1,0 +1,17 @@
+pre/
+_bak/
+logs/
+.htaccess
+*.bkp
+*.org
+*.swp
+*.map
+.hg
+.DS_Store
+.sass-cache
+*.map
+*.tpl.php
+templates_c/*
+**/templates_c/*
+!.gitkeep
+*/.svn/*
