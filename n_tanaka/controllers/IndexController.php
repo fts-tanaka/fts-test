@@ -6,7 +6,6 @@
 **
 ******************************/
 
-require_once('./model/credit.php');
 require_once('./model/TemplateAssign.php');
 require_once('./model/UserData.php');
 
@@ -19,7 +18,6 @@ class IndexController
     /* 実行本体 */
     public function execute() {
         //　モデルのインスタンスを作成
-        $credit = new Credit();
         $userData = new UserData();
         //　header.tplファイル（共通部分）に合わせるために
         //　_htmlheperに_templateAssignを代入
@@ -27,8 +25,6 @@ class IndexController
 
         // OS(ユーザーエージェント)をアサイン
         $this->_htmlHelper->setAssignData("os", $this->_userData->getAccessOS());
-        // OS(ユーザーエージェント)をアサイン
-        $this->_htmlHelper->setAssignData("gender", $this->_userData->getDecagraphGender());
         // 名前をアサイン
         $this->_htmlHelper->setAssignData("myname", "credit");
 
