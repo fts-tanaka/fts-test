@@ -1,0 +1,322 @@
+/* -------------------------------------------------
+ *
+ *					CoinWallSymbols - 自作
+ *
+------------------------------------------------- */
+@font-face{ 
+	font-family: 'CoinWallSymbols';
+	src: url('../font/coinwallsymbols-regular-webfont_20140203.woff') format('woff'),
+		url('../font/coinwallsymbols-regular-webfont_20140203.ttf') format('truetype');
+}
+
+/* -------------------------------------------------
+ *
+ *					カテゴリアイコン色定義
+ *
+------------------------------------------------- */
+%mod_iconBackgroundRed 		{ background: #FB3068; }
+%mod_iconBackgroundViridian	{ background: #29CCAA; }
+%mod_iconBackgroundPink		{ background: #EC7BFD; }
+%mod_iconBackgroundYGreen	{ background: #6DDC4C; }
+%mod_iconBackgroundOrange 	{ background: #FB7D1D; }
+%mod_iconBackgroundGold		{ background: #FDB940; }
+%mod_iconBackgroundPurple	{ background: #6B53E3; }
+%mod_iconBackgroundLightBlue	{ background: #36BDFD; }
+%mod_iconBackgroundPeach 	{ background: #FB6468; }
+%mod_iconBackgroundYellow	{ background: #FDDB2A; }
+%mod_iconBackgroundGreen	{ background: #4BA918; }
+%mod_iconBackgroundPalePink	{ background: #FC88AA; }
+%mod_iconBackgroundBlue		{ background: #598CFC; }
+.coinWallSymbol {
+	display:		inline-block;
+	vertical-align:	middle;
+	text-align:		center;
+	text-shadow:	none;
+	font-family:	'CoinWallSymbols';
+	font-style:		normal;
+	color:			#fff;
+	letter-spacing:	-1px;
+	background:		#666;
+	&.iconRegist {
+		@extend		%mod_iconBackgroundRed;
+	}
+	&.iconApplication {
+		@extend		%mod_iconBackgroundViridian;
+	}
+	&.iconShopping {
+		@extend		%mod_iconBackgroundPink;
+	}
+	&.iconSubscribe {
+		@extend		%mod_iconBackgroundYGreen;
+	}
+	&.iconReserve {
+		@extend		%mod_iconBackgroundOrange;
+	}
+	&.iconCreditcard {
+		@extend		%mod_iconBackgroundGold;
+	}
+	&.iconRequestmaterial {
+		@extend		%mod_iconBackgroundPurple;
+	}
+	&.iconOther {
+		@extend		%mod_iconBackgroundLightBlue;
+	}
+	&.iconFree {
+		@extend		%mod_iconBackgroundLightBlue;
+	}
+	&.iconRanking {
+		@extend		%mod_iconBackgroundYellow;
+	}
+	&.iconGame {
+		@extend		%mod_iconBackgroundViridian;
+	}
+	&.iconNew {
+		@extend		%mod_iconBackgroundOrange;
+	}
+	&.iconSmartpass {
+		@extend		%mod_iconBackgroundOrange;
+	}
+	&.iconYahooPremium {
+		@extend		%mod_iconBackgroundPurple;
+	}
+	&.iconSugotoku {
+		@extend		%mod_iconBackgroundRed;
+	}
+	&.iconCreditcard {
+		@extend		%mod_iconBackgroundGreen;
+	}
+	&.iconCampaign {
+		@extend		%mod_iconBackgroundGold;
+	}
+	&.iconWallpaper {
+		@extend		%mod_iconBackgroundPink;
+	}
+	&.iconEnquete {
+		@extend		%mod_iconBackgroundYGreen;
+	}
+	&.iconShopping {
+		@extend		%mod_iconBackgroundPeach;
+	}
+	&.iconBeauty {
+		@extend		%mod_iconBackgroundPalePink;
+	}
+	&.iconLife {
+		@extend		%mod_iconBackgroundViridian;
+	}
+	&.iconFashion {
+		@extend		%mod_iconBackgroundPeach;
+	}
+	&.iconFortune {
+		@extend		%mod_iconBackgroundPurple;
+	}
+	&.iconMusic {
+		@extend		%mod_iconBackgroundRed;
+	}
+	&.iconHealth {
+		@extend		%mod_iconBackgroundGold;
+	}
+	&.iconGourmet {
+		@extend		%mod_iconBackgroundOrange;
+	}
+	&.iconEsthetic {
+		@extend		%mod_iconBackgroundPalePink;
+	}
+	&.iconFX {
+		@extend		%mod_iconBackgroundYGreen;
+	}
+	&.iconHouse {
+		@extend		%mod_iconBackgroundViridian;
+	}
+	&.iconNews {
+		@extend		%mod_iconBackgroundBlue;
+	}
+	&.iconMarriage {
+		@extend		%mod_iconBackgroundRed;
+	}
+	&.iconLicense {
+		@extend		%mod_iconBackgroundGold;
+	}
+	&.iconInsurance {
+		@extend		%mod_iconBackgroundPeach;
+	}
+	&.iconDocomo {
+		background:		#AD2430;
+	}
+	&.iconAu {
+		background:		#ED572D;
+	}
+	&.iconSoftbank {
+		background:		#808080;
+	}
+	&.iconSoftbank {
+		background:		#808080;
+	}
+	&.iconBright {
+		@extend		%mod_iconBackgroundYellow;
+	}
+}
+
+/* -------------------------------------------------
+ *
+ *					見出し等アイコン設定
+ *
+------------------------------------------------- */
+.icon {
+	display:		inline-block;
+	line-height:	1.0;
+	font-family:	'CoinWallSymbols';
+	font-style:		normal;
+	vertical-align:	middle;
+}
+
+/* -------------------------------------------------
+ *
+ *					css sprite設定
+ *
+------------------------------------------------- */
+/*
+$sprite1-img:		url("../img/sprite1115.png") no-repeat;
+$sprite1-size:		250px 350px;
+@mixin sprite1-size($x:250px, $y:350px) {
+	-webkit-background-size: $x $y;
+	-moz-background-size: $x $y;
+	background-size: $x $y;
+}
+@mixin sprite {
+	background-image:	url("../img/sprite1115.png");
+	background-repeat:	no-repeat;
+	@include		bg-size(250px,350px);
+}
+*/
+
+/* -------------------------------------------------
+ *
+ *					AmebaSymbols - アメーバ製
+ *
+------------------------------------------------- */
+/*
+@font-face {
+	font-family: 'AmebaSymbols';
+	src: url("../font/ameba_symbols.woff") format('woff'),
+		url("../font/ameba_symbols.ttf") format('truetype');
+}
+.icon {
+	display:		inline-block;
+	line-height:	1.0;
+	font-family:	'AmebaSymbols';
+	font-size:		2.0rem;
+	font-style:		normal;
+	color:			#4dac26;
+	vertical-align:	middle;
+}
+.icon.a::before { content: "a"; }
+.icon.b::before { content: "b"; }
+.icon.c::before { content: "c"; }
+.icon.d::before { content: "d"; }
+.icon.e::before { content: "e"; }
+.icon.f::before { content: "f"; }
+.icon.g::before { content: "g"; }
+.icon.h::before { content: "h"; }
+.icon.i::before { content: "i"; }
+.icon.j::before { content: "j"; }
+.icon.k::before { content: "k"; }
+.icon.l::before { content: "l"; }
+.icon.m::before { content: "m"; }
+.icon.n::before { content: "n"; }
+.icon.o::before { content: "o"; }
+.icon.p::before { content: "p"; }
+.icon.q::before { content: "q"; }
+.icon.r::before { content: "r"; }
+.icon.s::before { content: "s"; }
+.icon.t::before { content: "t"; }
+.icon.u::before { content: "u"; }
+.icon.v::before { content: "v"; }
+.icon.w::before { content: "w"; }
+.icon.x::before { content: "x"; }
+.icon.y::before { content: "y"; }
+.icon.z::before { content: "z"; }
+.icon.A::before { content: "A"; }
+.icon.B::before { content: "B"; }
+.icon.C::before { content: "C"; }
+.icon.D::before { content: "D"; }
+.icon.E::before { content: "E"; }
+.icon.F::before { content: "F"; }
+.icon.G::before { content: "G"; }
+.icon.H::before { content: "H"; }
+.icon.I::before { content: "I"; }
+.icon.J::before { content: "J"; }
+.icon.K::before { content: "K"; }
+.icon.L::before { content: "L"; }
+.icon.M::before { content: "M"; }
+.icon.N::before { content: "N"; }
+.icon.O::before { content: "O"; }
+.icon.P::before { content: "P"; }
+.icon.Q::before { content: "Q"; }
+.icon.R::before { content: "R"; }
+.icon.S::before { content: "S"; }
+.icon.T::before { content: "T"; }
+.icon.U::before { content: "U"; }
+.icon.V::before { content: "V"; }
+.icon.W::before { content: "W"; }
+.icon.X::before { content: "X"; }
+.icon.Y::before { content: "Y"; }
+.icon.Z::before { content: "Z"; }
+.icon.footstamp::before { content: '"'; }
+.icon.add::before { content: '+'; }
+.icon.back::before { content: '<'; }
+.icon.allow::before { content: '>'; }
+.icon.crown::before { content: '¥'; }
+.icon.alert::before { content: '!'; }
+.icon.coin::before { content: '$'; }
+.icon.stand::before { content: '%'; }
+.icon.blank::before { content: '['; }
+.icon.time::before { content: '('; }
+.icon.history::before { content: ')'; }
+.icon.pigg::before { content: '`'; }
+.icon.ameg::before { content: '_'; }
+.icon.groupo::before { content: ']'; }
+.icon.peta::before { content: '.'; }
+.icon.now::before { content: '^'; }
+.icon.album::before { content: '/'; }
+.icon.community::before { content: '@'; }
+.icon.caution::before { content: ';'; }
+.icon.question::before { content: '?'; }
+.icon.hand::before { content: '~'; }
+.icon.maintenance::before { content: '}'; }
+.icon.nodata::before { content: '-'; }
+.iconLabel {
+	font-weight:	bold;
+	font-size:		0.9rem;
+	@include		text-shadow(0,1px,0,#fff);
+}
+*/
+
+/* icon
+------------------------------------------------- */
+/*
+.icon {
+	&.coin		{ color: #ffc412; }
+	&.ameg		{ color: #ffc412; }
+	&.G			{ color: #62667d; }
+	&.h			{ color: #fc85a4; }
+	&.B			{ color: #b895ff; }
+	&.crown		{ color: #ff3365; }
+	&.community { color: #b895ff; }
+	&.new  {
+		width:			20px;
+		margin-right:	1px;
+		color:			#ff9100;
+		font-size:		1.3rem;
+		font-weight:	normal;
+		vertical-align:	.1em;
+	}
+	&.megaphone {
+		width:			20px;
+		height:			15px;
+		vertical-align:	-.1em!important;
+		background:		$sprite1-img;
+		@include		sprite1-size;
+		background-position:	0 -200px;
+	}
+}
+*/

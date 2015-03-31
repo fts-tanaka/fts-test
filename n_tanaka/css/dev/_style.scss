@@ -1,0 +1,184 @@
+/* -------------------------------------------------
+ *
+ * 【やりたいこと】
+ *
+ * レイアウト以下を別ファイルに切り出したい。
+ * detailページにアイテムの指定などは不要。
+ * モジュール化して必要なもののみ適宜読み込みして軽量化。
+ *
+ * ボタンのグラデなどを切り出し。
+ * おすすめ情報のアイコンをウェブフォントに取り込み。
+ *
+ * ボタンのグラデやシャドウ、ページ背景色などを
+ * ホームに合わせる。
+ *
+------------------------------------------------- */
+/* -------------------------------------------------
+ *
+ *					色・スタイル定義
+ *
+------------------------------------------------- */
+$backgroundLight:	#fff;		// 背景色（明）
+$backgroundDark:	#f7f7f4;	// 背景色（暗）
+$backgroundHover:	#ebebeb;	// ホバー時の背景色
+$borderDotted:		1px dotted #ddd;	// ドット線
+$borderSolidLight:	1px solid #fff;		// 実線（明）
+$borderSolidDark:	1px solid #ddd;		// 実線（暗）
+$nameColor:			#5885a7;	// 案件名や検索条件名の文字色
+$backgroundLightPink:	#ff3366;		// ピンク（明）
+$backgroundDarkPink:	#b9264b;		// ピンク（暗）
+
+$backgroundDarkGreen:	#4dac26;		// 緑（暗）
+$backgroundDarkBlue:	#007eea;		// ブルー（暗）
+$backgroundLightYellow:	#fcf9d5;		// 黄色（明）
+
+
+
+
+/* -------------------------------------------------
+ *
+ *					ページ設計
+ *
+------------------------------------------------- */
+html {
+	font-size:		62.5%;
+//	@include		text-size-adjust(100%);
+}
+body {
+	position:		relative;
+	line-height:	1.4;
+	font-size:		1.4rem;
+	font-family:	Helvetica, Arial, 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', 'モリサワ 新ゴ R', 'Droid Sans', 'メイリオ', sans-serif;
+	color:			#333;
+	@include		text-shadow(0,1px,1px,rgba(255,255,255,.8));
+	background:		$backgroundLight;
+	background:		#ffce18;
+}
+.carWrap {
+	* {
+		@include		box-sizing(border-box);
+	}
+	a,
+	a:link {
+		display:		block;
+		width:			100%;
+		height:			100%;
+		color:			inherit;
+		text-decoration:	none;
+		-webkit-tap-highlight-color:	rgba(255,255,255,0);
+//		-webkit-tap-highlight-color:	red;
+	}
+	a:visited,
+	a:hover,
+	a:active,
+	a:focus {
+	//	color:			#999;
+	}
+	::-webkit-selection,
+	::-moz-selection,
+	::selection {
+	}
+	p {
+	//	text-align:		justify;
+	//	text-justify:	inter-ideograph;
+	}
+}
+
+
+/* -------------------------------------------------
+ *					開催中のキャンペーン♪
+------------------------------------------------- */
+#commonCampaign {
+	margin-top: 		9px;
+	li {
+		position:		relative;
+		border-bottom:	1px dotted #ddd;
+		&:nth-child(odd) {
+			background:		#fff;
+		}
+		&:nth-child(even) {
+			background:		#fafafa;
+		}
+		&:last-child {
+			border-bottom:	none;
+		}
+	}
+	h1 {
+		height:			24px;
+		line-height:	25px;
+		padding-left:	7px;
+		font-weight:	bold;
+		color:			#fff;
+		text-shadow:	0 1px 0 #999;
+		background:		#53BEE8;
+		border-top:		1px solid #fff;
+		border-bottom:	1px solid #ddd;
+	}
+	.banner {
+		@extend			%mod_bannerCommon !optional;
+		@extend			%mod_bannerMiddle !optional;
+		position:		absolute;
+		top:			6px;
+		left:			7px;
+		width:			107px;
+		height:			48px;
+		background-clip:	padding-box;
+		-webkit-background-size:	107px 48px !important;
+		background-size:	107px 48px !important;
+	}
+	.name {
+		left:			57px;
+		height:			19px;
+		line-height:	19px;
+		font-size:		1.4rem;
+		font-weight:	bold;
+	}
+	.description {
+		position:		absolute;
+		word-break:		break-all;
+		left:			119px;
+	}
+	.item {
+		height:			60px;
+		.name {
+			@extend			%ellipsis;
+			@extend			%mod_nameCommon !optional;
+			@extend			%mod_nameMiddle !optional;
+			position:		absolute;
+			top:			5px;
+			padding:		0 5px 0 62px;
+			color:			#5885a7;
+		}
+		.description {
+			@extend			%mod_descriptionCommon !optional;
+			@extend			%mod_descriptionMiddle !optional;
+			top:			24px;
+			line-height:	1.3;
+			color:			#aaa;
+			font-size: 		1.0rem;
+		}
+		&.tap {
+			background:		#ebebeb;
+		}
+		&:last-child {
+			border-bottom:	none;
+		}
+		.status {
+			position:		absolute;
+			bottom:			5px;
+			right:			7px;
+			width:			66px;
+			height:			16px;
+			line-height:	12px;
+			text-align:		center;
+			@include		border-radius(3px,3px,3px,3px);
+		}
+		.new {
+			background:		#4dac26;
+		}
+		.soon {
+			background:		#ff3366;
+		}
+	}
+}
+

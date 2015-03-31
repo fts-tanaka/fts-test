@@ -1,0 +1,27 @@
+/* 汎用パーツ 書き出しあり
+------------------------------------------------- */
+.invisible {
+	visibility:		hidden;
+}
+.displayNone {
+	display:		none;
+}
+
+/* 汎用パーツ 書き出しなし
+------------------------------------------------- */
+%cf {
+	zoom:		1;
+	&:before,
+	&:after {
+		content:	"\0020";
+		display:	table;
+	}
+	&:after {
+		clear:		both;
+	}
+}
+%ellipsis {
+	white-space:	nowrap;
+	overflow:		hidden;
+	text-overflow:	ellipsis;
+}

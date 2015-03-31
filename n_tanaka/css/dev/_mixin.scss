@@ -1,0 +1,184 @@
+/* mixin諸々
+------------------------------------------------- */
+@mixin appearance($appearance:none) {
+	-webkit-appearance: $appearance;
+	-moz-appearance: $appearance;
+	appearance: $appearance;
+}
+@mixin text-size-adjust($adjust:100%) {
+	-webkit-text-size-adjust:	$adjust;
+	-moz-text-size-adjust:	$adjust;
+	text-size-adjust:	$adjust;
+}
+@mixin box-sizing($box-sizing:border-box) {
+	-webkit-box-sizing: $box-sizing;
+	-moz-box-sizing: $box-sizing;
+	box-sizing: $box-sizing;
+}
+@mixin box-align($align:center) {
+	-webkit-box-align: $align;
+	-moz-box-align: $align;
+	box-align: $align;
+}
+@mixin display-box {
+	display: -webkit-box;
+	display: -moz-box;
+	display: box;
+}
+@mixin box-flex($flex:1) {
+	-webkit-box-flex: $flex;
+	-moz-box-flex: $flex;
+	box-flex: $flex;
+}
+@mixin flex-pack($pack:justify) {
+	flex-pack: $pack;
+	-webkit-box-pack: $pack;
+	-moz-box-pack: $pack;
+	box-pack: $pack;
+}
+@mixin box-shadow($x:0, $y:0, $blur:0, $color:rgba(0,0,0,.0), $in-x:0, $in-y:0, $in-blur:0, $in-color:rgba(0,0,0,.0)) {
+	-webkit-box-shadow: $x $y $blur $color,inset $in-x $in-y $in-blur $in-color;
+	-moz-box-shadow: $x $y $blur $color,inset $in-x $in-y $in-blur $in-color;
+	box-shadow: $x $y $blur $color,inset $in-x $in-y $in-blur $in-color;
+}
+@mixin box-shadow-in($x:0, $y:0, $blur:0, $color:rgba(0,0,0,.0)) {
+	-webkit-box-shadow: inset $x $y $blur $color;
+	-moz-box-shadow: inset $x $y $blur $color;
+	box-shadow: inset $x $y $blur $color;
+}
+@mixin text-shadow($x:0, $y:0, $blur:0, $color:rgba(0,0,0,.0)) {
+//	-webkit-text-shadow: $x $y $blur $color;
+//	-moz-text-shadow: $x $y $blur $color;
+	text-shadow: $x $y $blur $color;
+}
+@mixin rounded($rounded:0) {
+//	-webkit-border-radius: $rounded;
+//	-moz-border-radius: $rounded;
+	border-radius: $rounded;
+//	-webkit-background-clip: padding-box;
+//	-moz-background-clip: padding;
+	background-clip: padding-box;
+}
+@mixin border-radius($topleft:0, $topright:0, $bottomright:0, $bottomleft:0) {
+//	-webkit-border-top-left-radius: $topleft;
+//	-moz-border-radius-topleft: $topleft;
+	border-top-left-radius: $topleft;
+//	-webkit-border-top-right-radius: $topright;
+//	-moz-border-radius-topright: $topright;
+	border-top-right-radius: $topright;
+//	-webkit-border-bottom-right-radius: $bottomright;
+//	-moz-border-radius-bottomright: $bottomright;
+	border-bottom-right-radius: $bottomright;
+//	-webkit-border-bottom-left-radius: $bottomleft;
+//	-moz-border-radius-bottomleft: $bottomleft;
+	border-bottom-left-radius: $bottomleft;
+//	-webkit-background-clip: padding-box;
+//	-moz-background-clip: padding;
+	background-clip: padding-box;
+}
+@mixin bg-size($x:0, $y:0) {
+	-webkit-background-size: $x $y!important;
+	-moz-background-size: $x $y!important;
+	background-size: $x $y!important;
+}
+@mixin bg-clip($clip:padding-box) {
+	-webkit-background-clip: $clip;
+	-moz-background-clip: $clip;
+	background-clip: $clip;
+}
+@mixin opacity($opacity:0.25) {
+//	-webkit-opacity: $opacity;
+//	-moz-opacity:$opacity;
+	opacity:$opacity;
+//	-khtml-opacity: $opacity;
+//	filter: alpha(opacity=$opacity);
+}
+
+/* transform 変形
+------------------------------------------------- */
+@mixin translate($x:0, $y:0) {
+	-webkit-transform: translate($x, $y);
+	-moz-transform: translate($x, $y);
+	-ms-transform: translate($x, $y);
+	-o-transform: translate($x, $y);
+	transform: translate($x, $y);
+}
+@mixin scale($ratio:1.5) {
+	-webkit-transform: scale($ratio);
+	-moz-transform: scale($ratio);
+	transform: scale($ratio);
+}
+@mixin rotation($deg:5deg) {
+	-webkit-transform: rotate($deg);
+	-moz-transform: rotate($deg);
+	transform: rotate($deg);
+}
+
+/* transition 時間的変化
+------------------------------------------------- */
+@mixin transition($property:all, $duration:0.2s, $ease:ease, $delay:0s) {
+	-webkit-transition: $property $duration $ease $delay;
+	-moz-transition: $property $duration $ease $delay;
+	transition: $property $duration $ease $delay;
+}
+@mixin transition-property($property:all) {
+	-webkit-transition-property: $property;
+	-moz-transition-property: $property;
+	transition-property: $property;
+}
+@mixin transition-duration($duration:0.2s) {
+	-webkit-transition-duration: $duration;
+	-moz-transition-duration: $duration;
+	transition-duration: $duration;
+}
+@mixin transition-timing-function($ease:ease) {
+	-webkit-transition-timing-function: $ease;
+	-moz-transition-timing-function: $ease;
+	transition-timing-function: $ease;
+}
+@mixin transition-delay($delay:0s) {
+	-webkit-transition-delay: $delay;
+	-moz-transition-delay: $delay;
+	transition-delay: $delay;
+}
+
+/* animation アニメーション
+------------------------------------------------- */
+@mixin animation($name:none, $duration:0.2s, $ease:ease, $delay:0s, $iteration:1, $direction:normal) {
+	-webkit-animation: $name $duration $ease $delay $iteration $direction;
+	-moz-animation: $name $duration $ease $delay $iteration $direction;
+	animation: $name $duration $ease $delay $iteration $direction;
+}
+@mixin animation-name($name:none) {
+	-webkit-animation-name: $name;
+	-moz-animation-name: $name;
+	animation-name: $name;
+}
+@mixin animation-duration($duration:0.2s) {
+	-webkit-animation-duration: $duration;
+	-moz-animation-duration: $duration;
+	animation-duration: $duration;
+}
+@mixin animation-timing-function($ease:ease) {
+	-webkit-animation-timing-function: $ease;
+	-moz-animation-timing-function: $ease;
+	animation-timing-function: $ease;
+}
+@mixin animation-delay($delay:0s){
+	-webkit-animation-delay: $delay;
+	-moz-animation-delay: $delay;
+	animation-delay: $delay;
+}
+@mixin animation-iteration-count($iteration:1) {
+	-webkit-animation-iteration-count: $iteration;
+	-moz-animation-iteration-count: $iteration;
+	animation-iteration-count: $iteration;
+}
+@mixin animation-direction($direction:normal) {
+	-webkit-animation-direction: $direction;
+	-moz-animation-direction: $direction;
+	animation-direction: $direction;
+}
+@mixin animation-play-state($play:running) {
+	animation-play-state: $play;
+}
