@@ -1,0 +1,121 @@
+<!--テーブル-->
+
+
+<html>
+	<head>
+		<title>テーブル</title>
+	</head>
+	
+		<body>
+		基本的なテーブル<br>
+			<!--テーブル作成-->
+			<table border=1>
+				<!--表題を付ける-->
+				<caption>【各国の首都】</caption>
+				<tr><th>国名</th><th>首都</th></tr>
+				<tr><td>日本</td><td>東京</td></tr>
+				<tr><td>大韓民国</td><td>ソウル</td></tr>
+				<tr><td>中国</td><td>北京</td></tr>
+			</table><br>
+		
+			<!--テーブルの中身の開業を制御-->
+			<table border=1>
+				<tr><th nowrap>あああ</th><th>いいい</th><th>ううう</th></tr>
+			</table><br>
+			
+			<!--別の書き方で同上の表示-->
+			<table border=1>
+				<tr><th style="white-space:nowrap;">あああ</th><th>いいい</th><th>ううう</th></tr>
+			</table><br>			
+
+			<!--カラム（セル）を連結-->
+			<table border=1>
+				 <tr><td colspan=2>横連結</td></tr>
+				 <tr><td rowspan=2>縦連結</td><td>○○</td></tr>
+				 <tr><td>△△</td></tr>
+			</table><br>
+
+			<!--テーブルの幅や高さを指定-->
+			<table border=1 style="width:200px; height:100px">
+				<tr><td>東京都</td><td>12,345,678</td></tr>
+				<tr><td>広島県</td><td>987,654</td></tr>
+			</table><br>
+			
+			<!--数字を右寄せ-->
+			<table border=1 style="width:200px; height:100px">
+				<tr><td>東京都</td><td style="text-align:right">12,345,678</td></tr>
+				<tr><td>広島県</td><td style="text-align:right">987,654</td></tr>
+			</table><br>
+			
+			<!--文字を上下に寄せる-->
+			<table border=1 style="width:300px; height:100px">
+				<tr><td style="vertical-align:top">これは上寄せです。</td>
+				<td style="vertical-align:bottom">これは下寄せです。</td></tr>
+			</table><br>
+			
+			<!--テーブルの背景色を指定-->
+			<table border=1 style="background-color:#ffcccc;">
+				<tr><th>■■</th><th>●●</th></tr>
+				<tr><td>□□</td><td>◎◎</td></tr>
+				<tr><td>◇◇</td><td>○○</td></tr>
+			</table><br>
+			
+			<!--テーブルの背景画像を指定-->
+			<table border=1 style="background-image:url(sample01.gif);">
+				<tr><th>■■</th><th>●●</th></tr>
+				<tr><td>□□</td><td>◎◎</td></tr>
+				<tr><td>◇◇</td><td>○○</td></tr>
+			</table><br>
+
+			<!--テーブルを二つ並べる-->
+			<table>
+			 <tr>
+			  <td>
+			   <table border=1>
+			    <tr><td>ああ</td><td>ああ</td></tr>
+			    <tr><td>ああ</td><td>ああ</td></tr>
+			   </table>
+			  </td>
+			  <td>
+			   <table border=1>
+			    <tr><td>ああ</td><td>ああ</td></tr>
+			    <tr><td>ああ</td><td>ああ</td></tr>
+			   </table>
+			  </td>
+			 </tr>
+			</table><br>
+
+			<!--スタイルシートを用いてテーブルを二つ並べる-->
+			<table border=1 style="float:left">
+			 <tr><td>ああ</td><td>ああ</td></tr>
+			 <tr><td>ああ</td><td>ああ</td></tr>
+			</table>
+			<table border=1>
+			 <tr><td>ああ</td><td>ああ</td></tr>
+			 <tr><td>ああ</td><td>ああ</td></tr>
+			</table><br>
+
+			
+			<!--枠線の色を変える-->
+			<table border=1 style="border-color:#cc0000;">
+  				<tr><td>ああ</td><td>ああ</td></tr>
+			 <tr><td>ああ</td><td>ああ</td></tr>
+			</table><br>
+			
+			<!--枠線をシンプルにする-->
+			<table border=1 style="border-collapse:collapse;">
+			 <tr><th>■■</th><th>●●</th></tr>
+			 <tr><td>□□</td><td>◎◎</td></tr>
+			 <tr><td>◇◇</td><td>○○</td></tr>
+			</table><br>
+			
+			<!--角の丸いテーブルを表示-->
+			<table border=1 style="border:1px solid black; border-radius:8px; border-collapse:separate; border-spacing:8px;">
+			 <tr><td>AAA</td><td>AAA</td></tr>
+			 <tr><td>AAA</td><td>AAA</td></tr>
+			</table>
+ 
+
+	</body>
+
+</html>

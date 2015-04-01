@@ -1,0 +1,38 @@
+<!--フォーム-->
+
+<!--テキストを作成する-->
+<form method="POST" action="test.cgi">
+ 名前： <input type="text" name="NAME"><br>
+ 住所： <input type="text" name="ADDR"><br>
+ 
+ <!--ボタンを作成-->
+ <input type="submit" value="送信"><br>
+ 
+ <!--テキストエリア・テキストボックスを作成-->
+ <textarea name="KANSOU" cols=30 rows=3>AAA</textarea><br>
+ 
+ <!--ラジオボタンを作成-->
+ <input type="radio" name="SEIBETSU" checked>男性
+ <input type="radio" name="SEIBETSU" >女性<br>
+ 
+ <!--チェックボックスを作成-->
+ <input type="checkebox" name="RIYUU">書店で
+ <input type="checkebox" name="RIYUU">友達に薦められて<br>
+	
+	<!--セレクト部品を作成-->
+<select name="KOKUMEI">
+ <option value="JAPAN">日本
+ <option value="USA">米国
+ <option value="ENGLAND">英国
+</select><br>
+</form><br>
+
+
+<!--ボタンを作成②-->
+<from method="POST" action="sousin.cgi">
+ 名前： <input type="text" name="NAMAE"><br>
+      <input type="submit" value="送信">
+	  <input type="reset" value="取消">
+	  <input type="button" onclick="alert('Hello!!')" value="Click Me!">
+</form><br>
+
