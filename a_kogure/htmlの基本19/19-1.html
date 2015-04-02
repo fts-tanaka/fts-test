@@ -1,0 +1,82 @@
+<html>
+	<head>
+		<title>タイトル</title>
+	</head>
+	
+	<body>
+	
+		<!--フォームの作成-->
+		<form method="POST" action="test.cgi">
+			
+			<!--フォーム部分（テキスト）-->
+			名前：<input type="text" name="NAME"><br>
+			住所：<input type="text" name="ADDR"><br><br>
+			
+			<!--フォーム部分（テキストエリア・テキストボックス）-->
+			<textarea name="KANSOU" cols=30 rows=3>AAA</textarea><br><br>
+			
+			<!--フォーム部分（ラジオボタン）-->
+			<input type="radio" name="SEIBETSU" checked>男性
+			<input type="radio" name="SEIBETSU">女性<br><br>
+			
+			<!--フォーム部分（チェックボックス）-->
+			<input type="checkbox" name="RIYUU">書店で
+			<input type="checkbox" name="RIYUU">友人に薦められて<br><br>
+			
+			<!--フォーム部分（セレクト）-->
+			<select name="KOKUMEI">
+				<option value="JAPAN">日本
+				<option value="USA">米国
+				<option value="ENGLAND">英国
+			</select><br><br>
+	
+			<!--テキスト部分に初期値を設定-->
+			<input type="text" name="xxx" value="あいうえお"><br><br>
+			
+			<!--テキストエリアに初期値を設定-->
+			<textarea cols=50 rows=4 name="xxx">あいうえお</textarea><br><br>
+			
+			<!--チェックボックス、ラジオボタンに初期値を設定-->
+			<input type="checkbox" name="xxx">あああ
+			<input type="checkbox" name="xxx" checked>こっち
+			<input type="radio" name="xxx">あああ
+			<input type="radio" name="xxx" checked>こっち<br><br>
+			
+			<!--セレクト部分の初期値を設定-->
+			<select name="xxx">
+				<option value="IE">Internet Explorer
+				<option value="NS">Netscape
+				<option value="OP" selected>Opera
+			</select><br><br>
+			
+			<!--入力文字数を制限-->
+			<input type="text" maxlength=10><br><br>
+			
+			<!--テキストエリアの文字数を制限-->
+			<textarea onkeypress="return (this.value.length < 10)"></textarea><br><br>
+			
+			<!--テキストエリアでの改行-->
+			<textarea cols=40 rows=2 name="t1">あいうえお
+かきくけこ</textarea><br><br>
+
+			<!--日本語入力を制御-->
+			<textarea style="ime-mode: active;"></textarea>
+			
+			<!--フォームの部分の色を指定する-->
+			<input type="text" style="coler:#800000; background-color:#ffcccc"><br><br>
+			
+			<!--ボタンのサイズを指定する-->
+			<button style="width:300px">OK</button><br><br>
+			
+			<!--ボタンに色つき文字を表示-->
+			<button><span style="coler;#600000;"><b>Click Me!!</b></span></button><br><br>
+			
+			<!--フォーム部分（ボタン）-->
+			<input type="submit" value="送信">
+			<input type="reset" value="取消">
+			<input type="button" onclick="alert('Hello!!')" value="Click Me!"><br>
+			
+		</from>
+	</body>
+	
+</html>

@@ -1,0 +1,29 @@
+<!--未入力項目をチェック-->
+<html>
+	<head>
+	<title>タイトル</title>
+	</head>
+<body>			
+<script type="text/javascript">
+<!--
+function check() {
+  if (document.f1.NAME.value == "") {
+    alert("名前が入力されていません。");
+    document.f1.NAME.focus();
+    return false;
+  }
+  if (document.f1.ADDR.value == "") {
+    alert("住所が入力されていません。");
+    document.f1.ADDR.focus();
+    return false;
+  }
+  return true;
+}
+// -->
+</script>
+<form name="f1" onsubmit="return check()">
+ 	<div>名前：<input type="text" name="NAME"></div>
+ 	<div>住所：<input type="text" name="ADDR"></div>
+	<input type="submit" value="送信">
+</form>
+</body>
