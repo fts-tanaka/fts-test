@@ -1,0 +1,84 @@
+<!--フォーム-->
+
+<html>
+	<head>
+		<title>フォーム作成</title>
+	</head>	
+	<body onload="document.f1.t1.focus()">
+		<!--テキストを作成する-->
+		<form method="POST" action="test.cgi" >
+	  		名前： <input type="text" name="NAME"><br><br>
+	  		住所： <input type="text" name="ADDR"><br><br>
+	  
+	  		<!--ボタンを作成-->
+	  		<input type="submit" value="送信"><br><br>
+	  
+	 		<!--テキストエリア・テキストボックスを作成-->
+	  		<textarea name="KANSOU" cols=30 rows=3>AAA</textarea><br><br>
+	  
+	  		<!--ラジオボタンを作成-->
+	  		<input type="radio" name="SEIBETSU" checked>男性
+	  		<input type="radio" name="SEIBETSU" >女性<br><br>
+	  
+	  		<!--チェックボックスを作成-->
+	  		<input type="checkbox" name="RIYUU">書店で
+	  		<input type="checkbox" name="RIYUU">友達に薦められて<br><br>
+	 	
+	 		<!--セレクト部品を作成-->
+	 		<select name="KOKUMEI">
+	 		 <option value="JAPAN">日本
+	 		 <option value="USA">米国
+	 		 <option value="ENGLAND">英国
+	 		 </select><br><br>
+
+	 		<!--ボタンを作成②-->
+	 		 名前： <input type="text" name="NAMAE"><br><br>
+	 		 		<input type="submit" value="送信">
+	 			  	<input type="reset" value="取消">
+	 			  	<input type="button" onclick="alert('Hello!!')" value="Click Me!"><br><br>
+
+	 			  	<!--テキストを初期値に設定-->
+	 			  	<input type="text" name="あいうえお"><br><br>
+
+	 				<!--テキストエリア部品の初期値設定-->
+	 				<textarea cols=50 rows=4 name="XXX">あいうえお</textarea><br><br>
+
+	 				<!--テキストボックス・ラジオボタンの初期値設定-->
+	 				<input type="checkbox" name="XXX">あああ
+	 				<input type="checkbox" name="XXX" checked>あああ
+	 				<input type="radio" name="YYY">あああ
+	 				<input type="radio" name="YYY" checked>あああ<br><br>
+
+	 		<!--セレクト部品の初期設定-->
+	 		<select name="XXX">
+	 		 <option value="IE">Internet Explorer
+	 		 <option value="NS">Netscape
+	 		 <option value="OP" selected>Opera
+	 		</select><br><br>
+	 	
+	 		<!--フォーム部品入力文字数制限-->
+	 		<input type="text" maxlength="10"><br><br>
+	 		<textarea onkeypress="return(this,value.length < 10)"></textarea><br><br>
+	 		
+	 		<!--フォームの色を指定-->
+	 		<input type="text" style="color:#800000; background-color:#ffcccc"><br><br>
+	 		
+	 		<!--OKボタンのサイズを指定-->
+	 		<button style="width:300px">OK</button><br><br>
+	 		
+	 		<!--ボタンの色つきと太字設定-->
+	 		<button><span style="color;#800000;"><b>Click Me!!<b></span></button><br><br>
+	 		
+	 		<!--テキストエリアで改行-->
+	 		<textarea cols=40 rows=2 mame="t1">あいうえお
+	 		かきくけこ</textarea><br><br>
+			
+			<!--フォーム入力時に日本語入力設定-->
+			<textarea style="ime-mode: active;"></textarea><br>
+		</form>
+		
+		aaaaaaaaaa
+		
+	</body>
+</html>
+

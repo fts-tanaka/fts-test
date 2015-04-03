@@ -1,0 +1,19 @@
+<!--フォーム-->
+<!--フレーム部品にフォーカスをあてる-->
+<html>
+ <head>
+  <title>フォーム</title>
+ </head>
+   <body>
+	<form name="f1" action="#">
+	
+	<!--テキスト"t1"、"2"を作成-->
+	<input type="text" name="t1">
+	<input type="text" name="t2">
+	<!--"T1"、"T2"ボタンを作成-->
+	<!--"T1"を押したら"t1"テキストにフォーカスが当たる-->
+	<input type="button" onclick="document.f1.t1.focus()" value="T1">
+	<input type="button" onclick="document.f1.t2.focus()" value="T2">
+	</form>
+   </body>
+</html>
