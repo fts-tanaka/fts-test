@@ -1,0 +1,27 @@
+<html>
+	<head>
+	<title>タイトル</title>
+	</head>
+		<body>
+		
+		<!--テキスト入力欄のテキストを得る-->
+		<script type="text/javascript">
+		<!--
+			function func() {
+  			alert(document.form1.t1.value);
+  			alert(document.form1.f1.value);
+  			alert(document.form1.h1.value);
+  			alert(document.form1.a1.value);
+			}
+		// -->
+		</script>
+		
+		<form name="form1" onsubmit="func()">
+			<input type="text" name="t1" value="TEXT1"><br>
+			<input type="file" name="f1"><br>
+			<input type="hidden" name="h1" value="HIDDEN1"><br>
+			<textarea name="a1">TEXTAREA</textarea><br>
+			<input type="submit" value="OK">
+		</form>
+		
+		</body>
